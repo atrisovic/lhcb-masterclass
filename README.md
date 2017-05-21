@@ -6,7 +6,7 @@ Official homepage:
 Video tutorial:
 [https://www.youtube.com/watch?v=x2qJUbF2qUQ](https://www.youtube.com/watch?v=x2qJUbF2qUQ)
 
-## Instructions: How to run LHCb masterclass exercise
+## Instructions: How to run the LHCb masterclass exercise
 
 Download the program:
 
@@ -56,4 +56,4 @@ Scanning dependencies of target symlinks
 [100%] Built target symlinks
 ```
 
-Once the build is complete you can run the exercise with `./LHCb_launcher` even without setting the environment.
+Once the build is complete you can run the exercise with `./LHCb_launcher` even without setting up the environment.
