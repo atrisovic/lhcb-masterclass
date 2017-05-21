@@ -3,9 +3,10 @@
 Official homepage:
 [http://lhcb-public.web.cern.ch/lhcb-public/en/LHCb-outreach/masterclasses/en/index.html](http://lhcb-public.web.cern.ch/lhcb-public/en/LHCb-outreach/masterclasses/en/index.html)
 
-# Instructions 
+Video tutorial:
+[https://www.youtube.com/watch?v=x2qJUbF2qUQ](https://www.youtube.com/watch?v=x2qJUbF2qUQ)
 
-## How to run LHCb masterclass exercise
+## Instructions: How to run LHCb masterclass exercise
 
 Download the program:
 
@@ -15,7 +16,7 @@ unzip archive.zip
 cd LHCbMasterclass-master-9d4462db97b87afedd752277de8608d68ed3813a/
 ```
 
-## Run on AFS/EOS without ROOT:
+## Build on Lxplus (AFS/EOS) without ROOT:
 
 One way to run it on Lxplus:
 
@@ -35,16 +36,24 @@ Another way:
 cmake .
 make
 ./LHCb_launcher
-
 ```
 
-What used to work:
+Expected output:
+
 ```
-LbLogin -c x86_64-slc6-gcc48-opt
-SetupProject DaVinci v36r3
-cmake .
-make
-./LHCb_launcher
+[ 11%] Generating LaunchDict.h, LaunchDict.C
+Scanning dependencies of target LHCb_launcher
+[ 22%] Building CXX object src/D0_Lifetime/CMakeFiles/LHCb_launcher.dir/LHCb_launcher.C.o
+[ 33%] Building CXX object src/D0_Lifetime/CMakeFiles/LHCb_launcher.dir/launcher.cpp.o
+[ 44%] Building CXX object src/D0_Lifetime/CMakeFiles/LHCb_launcher.dir/LaunchDict.C.o
+[ 55%] Building CXX object src/D0_Lifetime/CMakeFiles/LHCb_launcher.dir/LHCb_D0_Exercise.C.o
+[ 66%] Building CXX object src/D0_Lifetime/CMakeFiles/LHCb_launcher.dir/Frame.cpp.o
+[ 77%] Building CXX object src/D0_Lifetime/CMakeFiles/LHCb_launcher.dir/LbMclassTrack.cpp.o
+[ 88%] Linking CXX executable ../../bin/LHCb_launcher
+[ 88%] Built target LHCb_launcher
+Scanning dependencies of target symlinks
+[100%] Create symlink to LHCb_launcher
+[100%] Built target symlinks
 ```
 
-
+Once the build is complete you can run the exercise with `./LHCb_launcher` even without setting the environment.
