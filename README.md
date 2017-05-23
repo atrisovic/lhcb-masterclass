@@ -57,3 +57,24 @@ Scanning dependencies of target symlinks
 ```
 
 Once the build is complete you can run the exercise with `./LHCb_launcher` even without setting up the environment.
+
+## Run with Docker
+
+Install Docker:
+```
+sudo curl -fsSL https://get.docker.com/ | sh
+sudo service docker start
+```
+
+Modify the `Dockerfile` to replace `gid=1000` with your group ID. Find your group ID with `id -g <your-username>`.
+
+Build and run the image:
+```
+sudo docker build -t lbmasterclass .
+sudo docker run -ti --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix lbmasterclass
+
+```
+
+Inside the container type `./LHCb_launcher` to start the exercise.
+To exit the exercise and the container run: `Ctrl` + `C` and then type `exit`.
+
